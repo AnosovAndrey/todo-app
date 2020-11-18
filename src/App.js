@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="todo">
-      <div className="todo__list">
+      <div className="todo__list_area">
         <TodoList todos={todos} removeTodo={removeTodo} />
       </div>
       <div className="todo__add">
