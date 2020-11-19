@@ -10,9 +10,8 @@ const Index = ({ todo, removeTodo }) => {
   return(
       <li>
           {todo.text}
-          <i>
+          <i onClick={handleRemove}>
                 <img src={deleteSvg} alt="delete" width="20px" height="20px"/>
-              {/* <button onClick={handleRemove}>X</button> */}
           </i>
       </li>
   );

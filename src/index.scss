@@ -11,6 +11,7 @@
 }
 
 .todo{
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,18 +20,26 @@
 
     &__list_area{
         display: flex;
-        background-color: rgb(253, 235, 235);
+        background-color: rgb(250, 243, 243);
         margin-top: 1%;
-        flex-grow: 1;
         width: 60%;
+
+        &:hover {
+            box-shadow: 1px 2px 20px #6093e0;
+        }
     }
 
     &__add_area{
-        background-color: rgb(235, 235, 253);
+        background-color: rgb(238, 238, 248);
         position: sticky;
         bottom: 6em;
         width: 40%;
         height: 100px;
+        justify-content: space-around;
+
+        // &:hover {
+        //     box-shadow: 1px 2px 20px #b65656;
+        // }
         margin-top: 8em;
     }
 }

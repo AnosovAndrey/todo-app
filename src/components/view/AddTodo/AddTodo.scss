@@ -1,0 +1,14 @@
+.add-todo{
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    &__button{
+        height: 100%;
+
+        &:hover {
+            box-shadow: 1px 2px 20px #b65656;
+        }
+    }
+}

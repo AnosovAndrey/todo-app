@@ -8,7 +8,7 @@ function App() {
   const [todos, setTodos] = React.useState([]);
 
   const addTodo = (todo) => {
-    setTodos([...todos, ...todos, todo]);
+    setTodos([...todos, todo]);
   };
 
   const removeTodo = (id) => {
