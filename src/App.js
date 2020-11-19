@@ -17,6 +17,10 @@ function App() {
         id: "22",
         text: "long todo rrrrrrrrrrr 34 435 ",
       },
+      {
+        id: "42",
+        text: "long todo rrrrrrrrrrr 34 435 long todo rrrrrrrrrrr 34 435 ",
+      },
     ]);
   }, [setTodos]);
 

@@ -1,10 +1,23 @@
 li{
-    width: inherit;
+    background-color: rgb(229, 250, 250);
     display: flex;
     align-items: right;
-    padding: 10px 12px;
+    padding: 25px 27px;
+    margin-bottom: 1px;
 
     &:hover {
         box-shadow: 1px 2px 20px #68e0f0;
+    }
+
+    span{
+        width: 98%;
+    }
+
+    i {
+        opacity: 0.3;
+
+        &:hover{
+            opacity: 0.8;
+        }
     }
 }

@@ -23,7 +23,16 @@
         top: 0;
         bottom: 0;
         right: 0;
-        //left: 0;
+        left: 0;
 
+        background: rgb(227, 243, 247);
+        transition: opacity 500ms;
+        
+        width: 30%;
+        height: 20%;
+
+        
     }
+
+    //https://codepen.io/jasonraveling/pen/QybzzN
 }

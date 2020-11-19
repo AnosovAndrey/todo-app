@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import React, { useEffect } from "react";
+import React from "react";
 
 import "./AddTodo.scss";
 
