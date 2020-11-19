@@ -16,11 +16,21 @@
     justify-content: center;
     flex-direction: column;
 
+
     &__list_area{
-        margin-bottom: 10px;
+        display: flex;
+        background-color: rgb(253, 235, 235);
+        margin-top: 1%;
+        flex-grow: 1;
+        width: 60%;
     }
 
-    &__add{
-        margin-bottom: 10px;
+    &__add_area{
+        background-color: rgb(235, 235, 253);
+        position: sticky;
+        bottom: 6em;
+        width: 40%;
+        height: 100px;
+        margin-top: 8em;
     }
 }

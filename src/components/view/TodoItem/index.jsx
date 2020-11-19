@@ -1,5 +1,5 @@
-import CloseIcon from "@material-ui/icons/Close";
 import React from "react";
+import deleteSvg from "./../../../assets/img/delete.svg";
 
 const Index = ({ todo, removeTodo }) => {
 
@@ -11,7 +11,8 @@ const Index = ({ todo, removeTodo }) => {
       <li>
           {todo.text}
           <i>
-              <button onClick={handleRemove}>X</button>
+                <img src={deleteSvg} alt="delete" width="20px" height="20px"/>
+              {/* <button onClick={handleRemove}>X</button> */}
           </i>
       </li>
   );

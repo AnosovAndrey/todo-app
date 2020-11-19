@@ -8,11 +8,11 @@ function App() {
   const [todos, setTodos] = React.useState([]);
 
   const addTodo = (todo) => {
-    setTodos([...todos, todo]);
+    setTodos([...todos, ...todos, todo]);
   };
 
   const removeTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id != id));
+    setTodos(todos.filter((todo) => todo.id !== id));
   };
 
   return (
@@ -20,7 +20,7 @@ function App() {
       <div className="todo__list_area">
         <TodoList todos={todos} removeTodo={removeTodo} />
       </div>
-      <div className="todo__add">
+      <div className="todo__add_area">
         <AddTodo addTodo={addTodo} />
       </div>
     </div>
