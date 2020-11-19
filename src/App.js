@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TodoList from "./components/view/TodoList";
 import AddTodo from "./components/view/AddTodo";
 
@@ -6,6 +6,19 @@ import "./index.scss";
 
 function App() {
   const [todos, setTodos] = React.useState([]);
+
+  useEffect(() => {
+    setTodos([
+      {
+        id: "12",
+        text: "firstTodo",
+      },
+      {
+        id: "22",
+        text: "long todo rrrrrrrrrrr 34 435 ",
+      },
+    ]);
+  }, [setTodos]);
 
   const addTodo = (todo) => {
     setTodos([...todos, todo]);

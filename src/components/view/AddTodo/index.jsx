@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import React from "react";
+import React, { useEffect } from "react";
 
 import "./AddTodo.scss";
 
@@ -26,7 +26,9 @@ const AddTodo = ({ addTodo }) => {
 
   return (
     <div className="add-todo">
-      <div className="add-todo__button" onClick={() => setVisiblePopup(!visiblePopup)}></div>
+      <div className="add-todo__button" onClick={() => setVisiblePopup(!visiblePopup)}>
+          <h1>Add todo</h1>
+      </div>
       { visiblePopup && 
             (<div className="add-todo__popup_form">
                 <form onSubmit={handleSubmit}>

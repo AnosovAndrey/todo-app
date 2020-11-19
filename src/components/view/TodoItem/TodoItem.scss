@@ -1,0 +1,10 @@
+li{
+    width: inherit;
+    display: flex;
+    align-items: right;
+    padding: 10px 12px;
+
+    &:hover {
+        box-shadow: 1px 2px 20px #68e0f0;
+    }
+}
