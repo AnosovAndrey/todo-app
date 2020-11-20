@@ -1,5 +1,7 @@
 import { v4 as uuid } from "uuid";
 import React from "react";
+import Button from "./../../inputs/Button";
+import Input from "./../../inputs/Input";
 
 import "./AddTodo.scss";
 
@@ -24,20 +26,40 @@ const AddTodo = ({ addTodo }) => {
     setTodo({ ...todo, text: event.target.value });
   };
 
+  const onClose = () => {
+      setVisiblePopup(false);
+  }
+
   return (
     <div className="add-todo">
-      <div className="add-todo__button" onClick={() => setVisiblePopup(!visiblePopup)}>
-          <h1>Add todo</h1>
+      <div
+        className="add-todo__button"
+        onClick={() => setVisiblePopup(!visiblePopup)}
+      >
+        <h1>Add todo</h1>
       </div>
-      { visiblePopup && 
-            (<div className="add-todo__popup_form">
-                <form onSubmit={handleSubmit}>
-                    <label>Input todo:</label>
-                    <input type="text" value={todo.text} onChange={handleChange} />
-                    <input type="submit" value="Submit" />
-                </form>
-            </div>) 
-        } 
+      {visiblePopup && (
+        <div className="add-todo__popup_form">
+            <Input
+                value={todo.text}
+                placeholder="Add todo"
+                onChange={handleChange}
+            >
+            </Input>
+            <Button 
+                name = "add-todo"
+                text = "Add" 
+                onClick={handleSubmit}
+            >
+            </Button>
+            <Button
+                name = "close-todo-form"
+                text="Close form"
+                onClick={onClose}
+            >
+            </Button>
+        </div>
+      )}
     </div>
   );
 };

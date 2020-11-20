@@ -22,16 +22,36 @@
         position: fixed;
         top: 0;
         bottom: 0;
-        right: 0;
         left: 0;
-
-        background: rgb(227, 243, 247);
-        transition: opacity 500ms;
-        
+        right: 0;
+        margin: auto auto;
+        background: #ffffff;
         width: 30%;
         height: 20%;
+        box-shadow: 0px 8px 15px rgba(3, 3, 3, 0.05);
+        box-sizing: border-box;
+        border-radius: 5px;
+        border-color: #1f1c1c;
+        border-style: solid;
+        border-width: 1px;
+        align-items: center;
 
-        
+        .input-field{
+            margin-top: 10px;
+            margin-left: 15px;
+            width: 80%;
+        }
+
+        .button-item{
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .close-todo-form{
+            background-color: #eca9a9;
+        }
+
+         
     }
 
     //https://codepen.io/jasonraveling/pen/QybzzN

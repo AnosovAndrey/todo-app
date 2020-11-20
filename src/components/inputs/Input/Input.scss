@@ -1,0 +1,12 @@
+.input-field{
+    background: #ffffff;
+    border: 1px solid;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+
+    &:focus{
+        border-color: #474747;
+    }
+}

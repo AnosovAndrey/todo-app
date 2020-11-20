@@ -1,0 +1,16 @@
+.button-item {
+    background: #eeeef3;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+
+    &:hover{
+        background: darken($color: #eeeef3, $amount: 10%);
+    }
+
+    &:active{
+        background: darken($color: #eeeef3, $amount: 50%);
+    }
+}
