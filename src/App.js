@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import TodoList from "./components/view/TodoList";
 import AddTodo from "./components/view/AddTodo";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 import "./index.scss";
 
@@ -43,8 +44,16 @@ function App() {
       <div className="todo__add_area">
         <AddTodo addTodo={addTodo} />
       </div>
+      <Switch>
+        <Route exact path="/abc">
+          <h1>component</h1>
+        </Route>
+        <Redirect from="/abe" to="/abc" />
+      </Switch>
     </div>
   );
 }
+
+//https://habr.com/ru/post/329996/
 
 export default App;
