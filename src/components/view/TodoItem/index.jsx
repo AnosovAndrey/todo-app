@@ -15,6 +15,7 @@ const Index = ({ todo, removeTodo }) => {
           <i onClick={handleRemove}>
                 <img src={deleteSvg} alt="delete" width="22px" height="22px"/>
           </i>
+          <span className="userName">User: {todo.user}</span>
       </li>
   );
 };

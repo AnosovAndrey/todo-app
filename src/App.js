@@ -12,14 +12,17 @@ function App() {
       {
         id: "12",
         text: "firstTodo",
+        user: "abs",
       },
       {
         id: "22",
         text: "long todo rrrrrrrrrrr 34 435 ",
+        user: "abs2",
       },
       {
         id: "42",
         text: "long todo rrrrrrrrrrr 34 435 long todo rrrrrrrrrrr 34 435 ",
+        user: "abs",
       },
     ]);
   }, [setTodos]);

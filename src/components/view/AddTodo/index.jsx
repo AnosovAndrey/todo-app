@@ -9,21 +9,22 @@ const AddTodo = ({ addTodo }) => {
   const [todo, setTodo] = React.useState({
     id: "",
     text: "",
+    user: ""
   });
 
   const [visiblePopup, setVisiblePopup] = React.useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (todo.text.trim()) {
+    if (todo.text.trim() && todo.user.trim()) {
       addTodo({ ...todo, id: uuid() });
-      setTodo({ ...todo, text: "" });
+      setTodo({ ...todo, text: "", user: ""});
     }
   };
 
   const handleChange = (event) => {
     event.preventDefault();
-    setTodo({ ...todo, text: event.target.value });
+    setTodo({ ...todo, [event.target.name]: event.target.value });
   };
 
   const onClose = () => {
@@ -41,8 +42,16 @@ const AddTodo = ({ addTodo }) => {
       {visiblePopup && (
         <div className="add-todo__popup_form">
             <Input
+                name="text"
                 value={todo.text}
-                placeholder="Add todo"
+                placeholder="Input todo"
+                onChange={handleChange}
+            >
+            </Input>
+            <Input
+                name="user"
+                value={todo.user}
+                placeholder="Input user"
                 onChange={handleChange}
             >
             </Input>
