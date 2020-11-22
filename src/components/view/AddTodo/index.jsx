@@ -1,7 +1,9 @@
 import { v4 as uuid } from "uuid";
 import React from "react";
-import Button from "./../../inputs/Button";
-import Input from "./../../inputs/Input";
+import axios from "axios";
+
+import {Button, Input} from "../../inputs";
+
 
 import "./AddTodo.scss";
 
@@ -17,8 +19,15 @@ const AddTodo = ({ addTodo }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (todo.text.trim() && todo.user.trim()) {
+
       addTodo({ ...todo, id: uuid() });
       setTodo({ ...todo, text: "", user: ""});
+
+      axios.post("http://localhost:3001/tasks", {
+          text: todo.text, userId: todo.user
+      }).then(({data}) => {
+        console.log(data);
+      });
     }
   };
 

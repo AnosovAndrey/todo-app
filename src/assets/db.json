@@ -1,67 +1,68 @@
 {
-    "tasks":[
-        {
-            "id": 4564564,
-            "text": "yoyoyo",
-            "user": "popo"
-        },
-        {
-            "id": 34545,
-            "text": "ysdfdfsfaso",
-            "user": "popo"
-        },
-        {
-            "id": 23452455,
-            "text": "sfsdfsfdyo 12313",
-            "user": "popo"
-        },
-        {
-            "id": 567675473,
-            "text": "ysfsdffyo",
-            "user": "123"
-
-        },
-        {
-            "id": 456776532,
-            "text": "ysdertgegdyo",
-            "user": "123"
-        },
-        {
-            "id": 123424,
-            "text": "yoyfghfewqd gdfg o",
-            "user": "123"
-        }
-    ],
-    "users": [
-        {
-            "name": "popo",
-            "task_ids": [
-                {
-                    "id": 4564564
-                },
-                {
-                    "id": 34545
-                },
-                {
-                    "id": 23452455
-                }
-            ] 
-        },
-        {
-            "name": "123",
-            "task_ids": [
-                {
-                    "id": 567675473
-                },
-                {
-                    "id": 456776532
-                },
-                {
-                    "id": 123424
-                }
-            ] 
-        }
-
-    ]
-    
+  "tasks": [
+    {
+      "id": 4564564,
+      "text": "yoyoyo",
+      "userId": "popo"
+    },
+    {
+      "id": 34545,
+      "text": "lond todo 12345 yoyoyo",
+      "userId": "popo"
+    },
+    {
+      "id": 23452455,
+      "text": "third todo",
+      "userId": "popo"
+    },
+    {
+      "id": 567675473,
+      "text": "testing 123",
+      "userId": "123"
+    },
+    {
+      "id": 456776532,
+      "text": "new",
+      "userId": "123"
+    },
+    {
+      "id": 123424,
+      "text": "make this, editable, add routes",
+      "userId": "123"
+    }
+  ],
+  "users": [
+    {
+      "id": "popo"
+    },
+    {
+      "id": "123"
+    }
+  ],
+  "user-task": [
+    {
+      "userId": "popo",
+      "taskId": 4564564
+    },
+    {
+      "userId": "popo",
+      "taskId": 34545
+    },
+    {
+      "userId": "popo",
+      "taskId": 23452455
+    },
+    {
+      "userId": "123",
+      "taskId": 567675473
+    },
+    {
+      "userId": "123",
+      "taskId": 456776532
+    },
+    {
+      "userId": "123",
+      "taskId": 123424
+    }
+  ]
 }

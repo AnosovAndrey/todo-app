@@ -1,12 +1,15 @@
 import React from "react";
 import deleteSvg from "./../../../assets/img/delete.svg";
+import axios from "axios"
 
 import "./TodoItem.scss"
 
 const Index = ({ todo, removeTodo }) => {
 
   function handleRemove() {
-    removeTodo(todo.id);
+    axios.delete("http://localhost:3001/tasks/" + todo.id).then(
+        () => removeTodo(todo.id)
+    );
   }
 
   return(

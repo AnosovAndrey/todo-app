@@ -1,31 +1,22 @@
 import React, { useEffect } from "react";
-import TodoList from "./components/view/TodoList";
-import AddTodo from "./components/view/AddTodo";
+import {TodoList, AddTodo} from "./components/view";
 import { Route, Switch, Redirect } from "react-router-dom";
+import axios from "axios";
+
 
 import "./index.scss";
 
 function App() {
+
   const [todos, setTodos] = React.useState([]);
 
   useEffect(() => {
-    setTodos([
-      {
-        id: "12",
-        text: "firstTodo",
-        user: "abs",
-      },
-      {
-        id: "22",
-        text: "long todo rrrrrrrrrrr 34 435 ",
-        user: "abs2",
-      },
-      {
-        id: "42",
-        text: "long todo rrrrrrrrrrr 34 435 long todo rrrrrrrrrrr 34 435 ",
-        user: "abs",
-      },
-    ]);
+    axios.get("http://localhost:3001/tasks").then( ({data}) => {
+            let array = [];
+            data.map((task) => array.push({id: task.id, text: task.text, user: task.userId}));
+            data.map((task) => setTodos(array));
+        }
+    )
   }, [setTodos]);
 
   const addTodo = (todo) => {
@@ -53,7 +44,5 @@ function App() {
     </div>
   );
 }
-
-//https://habr.com/ru/post/329996/
 
 export default App;
