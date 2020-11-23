@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import { TodoList, AddTodo } from "./components/view";
 import { Route, Switch, Redirect } from "react-router-dom";
 import axios from "axios";
+
+import { TodoList, AddTodo } from "./components/view";
 
 import "./index.scss";
 
@@ -64,8 +65,13 @@ function App() {
       <div className="todo__add_area">
         <AddTodo addTodo={addTodo} />
       </div>
+      <div className="field_username">
+        <span>Username:</span>
+      </div>
     </div>
   );
 }
 
 export default App;
+
+//https://doc.ebichu.cc/mobx/refguide/computed-decorator.html

@@ -31,7 +31,7 @@ const Index = ({ todo, removeTodo, editTodo }) => {
 
   return(
       <li>
-          <span>{todo.text}</span>
+          <span className = "textLine">{todo.text}</span>
           <i className="editBadge" onClick={handleEdit}>
                 <img src={editSvg} alt="edit" width="20px" height="20px"/>
           </i>

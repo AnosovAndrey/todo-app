@@ -17,7 +17,7 @@ const TodoList = ({ todos, removeTodo, editTodo }) => {
         <React.Fragment>
             {id && 
                 <Link to={"/tasks"}>
-                    <button className="home-Button">Home</button>
+                    <button className="home-button">Home</button>
                 </Link>
             }
             <ul className="list">

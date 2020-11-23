@@ -39,7 +39,7 @@
     }
 }
 
-.home-Button{
+.home-button{
     position: absolute;
     top: 0;
     left: 0;
@@ -62,4 +62,12 @@
     &:active{
         background: darken($color: #ffffff, $amount: 50%);
     }
+}
+
+.field_username{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 8%;
+    margin-top: 8%;
 }

@@ -4,21 +4,24 @@ li{
     align-items: right;
     padding: 25px 27px;
     margin-bottom: 1px;
-    //flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    //flex-wrap: wrap;
 
     &:hover {
         box-shadow: 1px 2px 20px #68e0f0;
     }
 
-    span{
-        width: 95%;
+    // span{
+    //     flex: 1;
+    // }
+    .textLine{
+        flex: 0 92%;
     }
 
     i {
         opacity: 0.3;
         cursor: pointer;
+        flex: 0 2%;
 
         &:hover{
             opacity: 0.8;
@@ -29,6 +32,7 @@ li{
         color: gray;
         font-size: 15px;
         cursor: pointer;
+        flex-basis: 100%;
         
         &:hover{
             opacity: 1;
