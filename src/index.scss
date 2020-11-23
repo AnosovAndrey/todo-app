@@ -37,29 +37,29 @@
         height: 100px;
         margin-top: 8em;
     }
+}
 
-    .home-Button{
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-left: 8%;
-        margin-top: 1%;
-        width: 10%;
-        height: 5%;
+.home-Button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 8%;
+    margin-top: 1%;
+    width: 10%;
+    height: 5%;
 
-        background: #eeeef3;
-        border-radius: 5px;
-        border: 0;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-size: 14px;
+    background: #eeeef3;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
 
-        &:hover{
-            background: darken($color: #eeeef3, $amount: 10%);
-        }
+    &:hover{
+        background: darken($color: #eeeef3, $amount: 10%);
+    }
 
-        &:active{
-            background: darken($color: #ffffff, $amount: 50%);
-        }
+    &:active{
+        background: darken($color: #ffffff, $amount: 50%);
     }
 }

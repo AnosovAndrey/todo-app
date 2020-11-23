@@ -26,18 +26,38 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
+  const editTodo = (todo) => {
+    console.log(todo.id, todo.text);
+    const newList = todos.map((item) => {
+      if (item.id === todo.id) {
+        item.text = todo.text;
+      }
+      return item;
+    });
+    console.log(newList);
+    setTodos(newList);
+  };
+
   return (
     <div className="todo">
       <Switch>
         <Redirect exact from="/" to="/tasks" />
         <Route path="/tasks">
           <div className="todo__list_area">
-            <TodoList todos={todos} removeTodo={removeTodo} />
+            <TodoList
+              todos={todos}
+              removeTodo={removeTodo}
+              editTodo={editTodo}
+            />
           </div>
         </Route>
         <Route exact path="/user/:id">
           <div className="todo__list_area">
-            <TodoList todos={todos} removeTodo={removeTodo} />
+            <TodoList
+              todos={todos}
+              removeTodo={removeTodo}
+              editTodo={editTodo}
+            />
           </div>
         </Route>
       </Switch>

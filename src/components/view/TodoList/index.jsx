@@ -5,7 +5,7 @@ import TodoItem from "./../TodoItem";
 
 import "./List.scss";
 
-const TodoList = ({ todos, removeTodo }) => {
+const TodoList = ({ todos, removeTodo, editTodo }) => {
 
     const { id } = useParams();
 
@@ -26,6 +26,7 @@ const TodoList = ({ todos, removeTodo }) => {
                     key={todo.id} 
                     todo={todo}
                     removeTodo={removeTodo}
+                    editTodo={editTodo}
                 />
                 ))}
             </ul>
