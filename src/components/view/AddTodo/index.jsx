@@ -20,13 +20,11 @@ const AddTodo = ({ addTodo }) => {
     event.preventDefault();
     if (todo.text.trim() && todo.user.trim()) {
 
-      addTodo({ ...todo, id: uuid() });
-      setTodo({ ...todo, text: "", user: ""});
-
       axios.post("http://localhost:3001/tasks", {
           text: todo.text, userId: todo.user
-      }).then(({data}) => {
-        console.log(data);
+      }).then(({data}) => {    
+        addTodo({ ...todo, id: uuid() });
+        setTodo({ ...todo, text: "", user: ""});
       });
     }
   };

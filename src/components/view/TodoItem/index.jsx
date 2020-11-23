@@ -1,6 +1,7 @@
 import React from "react";
 import deleteSvg from "./../../../assets/img/delete.svg";
 import axios from "axios"
+import {Link} from "react-router-dom";
 
 import "./TodoItem.scss"
 
@@ -18,7 +19,9 @@ const Index = ({ todo, removeTodo }) => {
           <i onClick={handleRemove}>
                 <img src={deleteSvg} alt="delete" width="22px" height="22px"/>
           </i>
-          <span className="userName">User: {todo.user}</span>
+          <Link to={`/user/${todo.user}`}>
+                <span className="userName">User: {todo.user}</span>
+          </Link>
       </li>
   );
 };
