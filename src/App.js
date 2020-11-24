@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import axios from "axios";
 
-import { TodoList, AddTodo } from "./components/view";
+import { TodoList, AddTodo, UserInfo } from "./components/view";
 
 import "./index.scss";
 
-function App() {
+const App = () => {
   const [todos, setTodos] = React.useState([]);
 
   useEffect(() => {
@@ -65,12 +65,10 @@ function App() {
       <div className="todo__add_area">
         <AddTodo addTodo={addTodo} />
       </div>
-      <div className="field_username">
-        <span>Username:</span>
-      </div>
+      <UserInfo />
     </div>
   );
-}
+};
 
 export default App;
 
