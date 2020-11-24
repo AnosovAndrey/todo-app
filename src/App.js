@@ -71,5 +71,3 @@ const App = () => {
 };
 
 export default App;
-
-//https://doc.ebichu.cc/mobx/refguide/computed-decorator.html

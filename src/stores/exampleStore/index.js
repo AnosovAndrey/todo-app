@@ -15,3 +15,5 @@ class ExampleStore {
     this.likesCount++;
   }
 }
+
+export default ExampleStore;

@@ -2,10 +2,15 @@ import React from "react";
 import { observer, inject } from "mobx-react";
 
 const UserInfo = inject("Store")(
-  observer(({ getUserInfo }) => {
+  observer(({ Store }) => {
+
+    const {user, userInfo} = Store;
+
     return (
       <div className="field_username">
-        <span>Last Username: {getUserInfo}</span>
+          {
+              user && <span>Last Username: {userInfo}</span>
+          }
       </div>
     );
   })

@@ -13,13 +13,14 @@ class Store {
   }
 
   get userInfo() {
-    console.log(this.user + " task number: X");
+    console.log(this.user + " opened");
     return this.user + " task number: X";
   }
 
-  setUser(name) {
+  setUser = (name) => {
     this.user = name;
-  }
+    console.log(this.user);
+  };
 }
 
 export default new Store();
